@@ -14,6 +14,7 @@ import Booking from './Pages/Booking/Booking';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import ContactUs from './Pages/ConactUs/ContactUs';
+import Doctors from './Pages/Home/Doctors/Doctors';
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/doctors">
+              <Doctors></Doctors>
             </Route>
             <Route path="/services">
               <Services></Services>

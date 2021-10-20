@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
+import Doctors from '../Doctors/Doctors';
 import Service from '../Service/Service';
 import './Home.css';
 
@@ -23,6 +24,7 @@ const Home = () => {
                 }
 
             </div>
+            <Doctors></Doctors>
 
 
         </div>
