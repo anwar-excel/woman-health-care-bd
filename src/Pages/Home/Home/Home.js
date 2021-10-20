@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ContactUs from '../../ContactUs/ContactUs';
 import Banner from '../Banner/Banner';
 import Doctors from '../Doctors/Doctors';
 import Service from '../Service/Service';
@@ -26,7 +27,7 @@ const Home = () => {
 
             </div>
             <Doctors></Doctors>
-
+            <ContactUs></ContactUs>
 
         </div>
     );
