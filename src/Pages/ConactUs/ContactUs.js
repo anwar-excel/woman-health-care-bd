@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import './Contact.css'
 
 
@@ -6,6 +7,7 @@ const ContactUs = () => {
     return (
 
         <div >
+            <h2 className="h2">Contact With Us</h2>
             <input className="input" type="text" name="" id="" placeholder="Enter your name" />
             <br />
             <input className="input" type="email" name="" id="" placeholder="Example abc@gmail.com" />
@@ -15,7 +17,7 @@ const ContactUs = () => {
             <input className="input" type="password" name="" id="" placeholder="Enter your password" />
             <br />
             <br />
-            <input className="input" type="submit" value="Submit" />
+            <Button className="btn btn-primary"> Submit</Button>
         </div>
 
     );
