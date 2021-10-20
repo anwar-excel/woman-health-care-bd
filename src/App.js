@@ -13,7 +13,7 @@ import Login from './Pages/Login/Login';
 import Booking from './Pages/Booking/Booking';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-import ContactUs from './Pages/ConactUs/ContactUs';
+import ContactUs from './Pages/ContactUs/ContactUs';
 import Doctors from './Pages/Home/Doctors/Doctors';
 
 
@@ -36,9 +36,9 @@ function App() {
             <PrivateRoute path="/services">
               <Services></Services>
             </PrivateRoute>
-            <Route path="/service">
+            {/* <Route path="/service">
               <Service></Service>
-            </Route>
+            </Route> */}
             <PrivateRoute path="/booking/:serviceId">
               <Booking></Booking>
             </PrivateRoute>
