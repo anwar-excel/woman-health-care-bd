@@ -1,13 +1,15 @@
 import React from 'react';
 
 const Service = (props) => {
-    const { img, name, description } = props.diease;
+    // const { name, description } = props.dis;
+    const { name, description } = props.disease;
     return (
-        <div>
-            <img src={img} alt="" />
+        <div id="service">
+
 
             <h2>{name}</h2>
             <p>{description}</p>
+            <button>Book {name.toLowerCase()}</button>
 
         </div>
     );

@@ -3,18 +3,19 @@ import Service from '../Service/Service';
 import './Services.css';
 
 const Services = () => {
-    const [dieases, setDieases] = useState([]);
+    const [diseases, setDiseases] = useState([]);
     useEffect(() => {
         fetch('./data.json')
             .then(res => res.json())
-            .then(data => setDieases(data));
+            .then(data => setDiseases(data));
     }, [])
     return (
         <div>
             <div className="services">
                 {
-                    dieases.map(diease => <Service
-                        diease={diease}
+                    diseases.map(disease => <Service
+                        key={disease.id}
+                        disease={disease}
                     ></Service>)
                 }
             </div>
