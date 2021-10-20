@@ -11,6 +11,7 @@ const Doctors = () => {
     }, [])
     return (
         <div>
+            <h2>Doctor Details</h2>
             <div id="doctors" className="doctors ">
                 {
                     doctors.map(doctor => <Doctor
