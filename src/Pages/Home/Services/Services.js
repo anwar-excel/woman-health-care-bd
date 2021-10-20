@@ -10,14 +10,14 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setDiseases(data));
     }, [])
+
     return (
         <div>
-            <div id="services" className="services ">
+            <div id="services" className="services">
                 {
-                    diseases.map(disease => <Service
-                        key={disease.id}
-                        disease={disease}
-                    ></Service>)
+                    diseases.map((disease) => (
+                        <Service key={disease.id} disease={disease}></Service>
+                    ))
                 }
 
             </div>
