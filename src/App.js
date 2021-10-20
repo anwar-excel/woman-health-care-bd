@@ -9,35 +9,51 @@ import NotFound from './Pages/Home/NotFound/NotFound';
 import Footer from './Pages/Footer/Footer';
 import Service from './Pages/Home/Service/Service';
 import Services from './Pages/Home/Services/Services';
+import Login from './Pages/Login/Login';
+import Booking from './Pages/Booking/Booking';
+import AuthProvider from './contexts/AuthProvider';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import ContactUs from './Pages/ConactUs/ContactUs';
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/services">
-            <Services></Services>
-          </Route>
-          <Route path="/service">
-            <Service></Service>
-          </Route>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/services">
+              <Services></Services>
+            </Route>
+            <Route path="/service">
+              <Service></Service>
+            </Route>
+            <PrivateRoute path="/booking/:serviceId">
+              <Booking></Booking>
+            </PrivateRoute>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/contact">
+              <ContactUs></ContactUs>
+            </Route>
 
 
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
-    </div>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
+    </div >
   );
 }
 

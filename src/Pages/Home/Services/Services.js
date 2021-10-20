@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Booking from '../../Booking/Booking';
 import Service from '../Service/Service';
 import './Services.css';
 
@@ -11,13 +12,14 @@ const Services = () => {
     }, [])
     return (
         <div>
-            <div className="services">
+            <div id="services" className="services ">
                 {
                     diseases.map(disease => <Service
                         key={disease.id}
                         disease={disease}
                     ></Service>)
                 }
+
             </div>
         </div>
     );

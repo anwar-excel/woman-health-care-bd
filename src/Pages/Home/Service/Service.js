@@ -1,15 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Service = (props) => {
+const Service = ({ disease }) => {
     // const { name, description } = props.dis;
-    const { name, description } = props.disease;
+    const { id, name, description, img } = disease;
+    const serviceStyle = {
+        border: '3px solid goldenrod',
+        padding: '10px',
+        paddingTop: '10px',
+        borderRadius: '10px',
+        margin: '10px'
+    }
     return (
-        <div id="service">
+        <div style={serviceStyle} id="service" className="pb-3 w-100">
 
-
+            <img src={img} alt="" />
             <h2>{name}</h2>
-            <p>{description}</p>
-            <button>Book {name.toLowerCase()}</button>
+            <p className="px-3">{description}</p>
+            <Link to={`/booking/${id}`}><button className="btn btn-warning">Book {name.toLowerCase()}</button></Link>
 
         </div>
     );

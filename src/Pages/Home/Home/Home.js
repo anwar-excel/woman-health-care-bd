@@ -7,12 +7,12 @@ import './Home.css';
 const Home = () => {
     const [diseases, setDiseases] = useState([]);
     useEffect(() => {
-        fetch('./data.json')
+        fetch('./home.json')
             .then(res => res.json())
             .then(data => setDiseases(data));
     }, [])
     return (
-        <div>
+        <div id="home">
             <Banner></Banner>
             <div className="diease">
                 {
@@ -23,6 +23,7 @@ const Home = () => {
                 }
 
             </div>
+
 
         </div>
     );
